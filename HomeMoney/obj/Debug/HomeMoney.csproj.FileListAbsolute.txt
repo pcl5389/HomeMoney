@@ -1,0 +1,15 @@
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\HomeMoney.exe.config
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\HomeMoney.exe
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\HomeMoney.pdb
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\MyComboBox.dll
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\MyComboBox.pdb
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.csprojAssemblyReference.cache
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.Form1.resources
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.Properties.Resources.resources
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.csproj.GenerateResource.cache
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.csproj.CoreCompileInputs.cache
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.csproj.CopyComplete
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.exe
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.pdb
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\ChnCharInfo.dll
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\NPinyin.dll

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMoney", "HomeMoney\HomeMoney.csproj", "{15845BB0-F636-44F0-AFD2-236B3D0F2FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaler.UI", "MyComboBox\Scaler.UI.csproj", "{D57E6BC2-B382-4099-BD07-D0FF698E5180}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15845BB0-F636-44F0-AFD2-236B3D0F2FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15845BB0-F636-44F0-AFD2-236B3D0F2FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15845BB0-F636-44F0-AFD2-236B3D0F2FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15845BB0-F636-44F0-AFD2-236B3D0F2FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57E6BC2-B382-4099-BD07-D0FF698E5180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57E6BC2-B382-4099-BD07-D0FF698E5180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57E6BC2-B382-4099-BD07-D0FF698E5180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57E6BC2-B382-4099-BD07-D0FF698E5180}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10F8F6D9-AD4C-41F9-ADCD-951F9F98F855}
+	EndGlobalSection
+EndGlobal
