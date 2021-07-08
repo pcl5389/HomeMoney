@@ -62,7 +62,6 @@ namespace Scaler.UI
                 this.Items[iOld].ForeColor = ForeColor; //恢复默认背景色 
                 iOld = -1; //设置当前处于无选中项状态 
             }
-
             base.OnItemSelectionChanged(e);
         }
         protected override void OnNotifyMessage(Message m)

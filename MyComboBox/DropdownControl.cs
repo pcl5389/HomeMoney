@@ -13,9 +13,6 @@ namespace Scaler.UI
     public class DropdownControl : ToolStripDropDown, IMessageFilter
     {
         #region Properties
-        /// <summary>
-        /// Gets the content of the pop-up.
-        /// </summary>
         public Control Content { get; private set; }
         #endregion
 
@@ -96,7 +93,6 @@ namespace Scaler.UI
             Height = h;
             Show(m_opener, cloc, ToolStripDropDownDirection.BelowRight);
         }
-
         #region internals
         /// <summary>
         /// Clean up any resources being used.

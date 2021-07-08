@@ -40,6 +40,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.myComboBox2 = new Scaler.UI.MyComboBox();
             this.myComboBox1 = new Scaler.UI.MyComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -73,6 +75,7 @@
             this.columnHeader4,
             this.columnHeader5});
             this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(488, 337);
@@ -162,14 +165,40 @@
             this.myComboBox1.Size = new System.Drawing.Size(127, 24);
             this.myComboBox1.TabIndex = 1;
             this.myComboBox1.AfterChange += new System.EventHandler(this.myComboBox1_AfterChange);
-            this.myComboBox1.SelectedIndexChanged += new System.EventHandler(this.myComboBox1_SelectedIndexChanged);
             this.myComboBox1.Enter += new System.EventHandler(this.myComboBox1_Enter);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "11111",
+            "2222",
+            "33333"});
+            this.comboBox1.Location = new System.Drawing.Point(530, 199);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(134, 20);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "6666",
+            "7777",
+            "8888"});
+            this.comboBox2.Location = new System.Drawing.Point(530, 239);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(134, 20);
+            this.comboBox2.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.listView1);
@@ -200,6 +229,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 

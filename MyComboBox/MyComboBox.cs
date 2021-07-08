@@ -68,28 +68,29 @@ namespace Scaler.UI
                 TabStop = false,
                 Dock = DockStyle.Fill,
                 View = View.Details,
-                GridLines=true,
+                GridLines = true,
                 FullRowSelect = true,
                 MultiSelect = false,
                 HideSelection = true,
-               
             };
             m_list.Click += onSuggestionListClick;
             FontChanged += new EventHandler(NewFont);
             DropDownStyle = ComboBoxStyle.DropDown;
-
+            AutoCompleteMode = AutoCompleteMode.None;
             m_dropDown = new DropdownControl(m_list);
             DropDownHeight = 1;
-            hideDropDown();
+            m_list.GotFocus += M_list_GotFocus;
+            //hideDropDown();
+        }
+
+        private void M_list_GotFocus(object sender, EventArgs e)
+        {
+            this.Focus();
         }
 
         protected override void OnClick(EventArgs e)
         {
-            if (!m_dropDown.Visible)
-            {
-                showDropDown();
-            }
-            //base.OnClick(e);
+            DroppedDown = true;
         }
 
         private void NewFont(object sender, EventArgs e)
@@ -115,45 +116,25 @@ namespace Scaler.UI
             {
                 return;
             }
-            hideDropDown();
-            m_dropDown.Show(this, new Size(DropDownWidth, DropDownHeight));
+            if (DroppedDown == false)
+            {
+                m_dropDown.Show(this, new Size(DropDownWidth, DropDownHeight));
+            }
         }
 
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Winapi)]
         internal static extern IntPtr GetFocus();
-
         ///获取 当前拥有焦点的控件
         private Control GetFocusedControl()
         {
             Control focusedControl = null;
-
-            // To get hold of the focused control:
-
             IntPtr focusedHandle = GetFocus();
-
             if (focusedHandle != IntPtr.Zero)
-
-                //focusedControl = Control.FromHandle(focusedHandle);
-
-                focusedControl = Control.FromChildHandle(focusedHandle);
-
+                focusedControl = FromChildHandle(focusedHandle);
             return focusedControl;
         }
 
-        bool InOwnerWindow(Control ctl)
-        {
-            IntPtr focusedHandle = GetFocus();
-            if (focusedHandle != IntPtr.Zero)
-            {
-                foreach (Control ct in ctl.Controls)
-                {
-                    if (ct.Handle == focusedHandle)
-                        return true;
-                }
-            }
-            return false;
-        }
 
         /// <summary>
         /// <see cref="ComboBox.OnLostFocus(EventArgs)"/>
@@ -162,20 +143,15 @@ namespace Scaler.UI
         {
             if (!m_dropDown.Focused && !m_list.Focused && GetFocusedControl() != this)
             {
-#if DEBUG
-                Console.WriteLine("OnLostFocus, "+ (GetFocusedControl()==this).ToString() +  "当前焦点"+ GetFocus());
-#endif
                 hideDropDown();
             }
             base.OnLostFocus(e);
         }
         private void onSuggestionListClick(object sender, EventArgs e)
         {
-            Text = m_list.SelectedItems[0].Text;
+            //Text = m_list.SelectedItems[0].Text;
+            //Select(0, Text.Length);
             m_fromKeyboard = false;
-
-            Focus();
-            Select(0, Text.Length);
             hideDropDown();
             if(AfterChange!=null)
                 AfterChange.Invoke(this, e);
@@ -213,7 +189,6 @@ namespace Scaler.UI
                 m_dropDown.Close();
             }
         }
-
         /// <summary>
         /// if the dropdown is visible some keystrokes
         /// should behave in a custom way
@@ -246,12 +221,12 @@ namespace Scaler.UI
                     }
                     break;
                 case Keys.Up:
-                    if (m_list.SelectedIndices[0] > 0)
+                    if (m_list.SelectedIndices.Count > 0)
                     {
                         m_list.Items[m_list.SelectedIndices[0] - 1].Selected = true;
                         m_list.Items[m_list.SelectedIndices[0]].EnsureVisible();
                     }
-                    else if (m_list.SelectedIndices[0] <= 0)
+                    else if (m_list.Items.Count > 0)
                     {
                         m_list.Items[m_list.Items.Count - 1].Selected = true;
                         m_list.Items[m_list.Items.Count - 1].EnsureVisible();
@@ -332,11 +307,22 @@ namespace Scaler.UI
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new bool DroppedDown
         {
-            get { return base.DroppedDown || m_dropDown.Visible; }
+            get { return m_dropDown.Visible; }
             set
             {
-                m_dropDown.Visible = false;
-                base.DroppedDown = value;
+                if(base.DroppedDown)
+                    base.DroppedDown = false;
+                if (value == true)
+                {
+                    if(m_dropDown.Visible==false)
+                        showDropDown();
+                }
+                else
+                {
+                    if (m_dropDown.Visible == true)
+                        hideDropDown();
+                }
+                //m_dropDown.Visible = false;
             }
         }
         #endregion
@@ -352,13 +338,12 @@ namespace Scaler.UI
         }
         protected override void WndProc(ref Message m)
         {
+            //Console.WriteLine("事件ID:" + HIWORD((int)m.WParam));
             switch (HIWORD((int)m.WParam))
             {
                 case CBN_DROPDOWN:
-                    if(!m_dropDown.Visible)
-                    {
-                        showDropDown();
-                    }
+                    //Console.WriteLine(string.Format("{0} DroppedDown：{1}", DateTime.Now.ToString("HH:mm:ss fff"), base.DroppedDown.ToString()));
+                    DroppedDown = true;
                     IntPtr hwnd = this.Handle;
                     SendMessage(hwnd, BM_CLICK, 0, 0);     //发送点击按钮的消息
                     return;

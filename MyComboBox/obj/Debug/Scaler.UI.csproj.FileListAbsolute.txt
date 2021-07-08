@@ -16,9 +16,9 @@ D:\Projects\HomeMoney\MyComboBox\bin\Debug\MyComboBox.pdb
 D:\Projects\HomeMoney\MyComboBox\bin\Debug\Scaler.dll
 D:\Projects\HomeMoney\MyComboBox\bin\Debug\Newtonsoft.Json.dll
 D:\Projects\HomeMoney\MyComboBox\bin\Debug\VTemplate.Engine.dll
-D:\Projects\HomeMoney\MyComboBox\bin\Debug\AjaxPro.2.dll
 D:\Projects\HomeMoney\MyComboBox\bin\Debug\Scaler.pdb
 D:\Projects\HomeMoney\MyComboBox\obj\Debug\Scaler.UI.csproj.CoreCompileInputs.cache
 D:\Projects\HomeMoney\MyComboBox\obj\Debug\Scaler.UI.csproj.CopyComplete
 D:\Projects\HomeMoney\MyComboBox\obj\Debug\MyComboBox.dll
 D:\Projects\HomeMoney\MyComboBox\obj\Debug\MyComboBox.pdb
+D:\Projects\HomeMoney\MyComboBox\obj\Debug\Scaler.UI.csproj.AssemblyReference.cache

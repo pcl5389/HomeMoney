@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HomeMoney
@@ -82,31 +78,18 @@ namespace HomeMoney
             myComboBox2.ColumnsWidth = new string[] { "1", "120" };
             myComboBox2.dtSource = dt;
         }
-
-
-        private void myComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //myComboBox1.Text = myComboBox1.dtSource.Rows[myComboBox1.SelectedIndex][1].ToString();
-        }
-
         private void myComboBox1_AfterChange(object sender, EventArgs e)
         {
             myComboBox1.Text = myComboBox1.dtSource.Rows[myComboBox1.m_list.SelectedIndices[0]][1].ToString();
             init_kemu2(myComboBox1.Text);
-            myComboBox1.SelectionStart = 0;
-            myComboBox1.SelectionLength = 0;
-            myComboBox1.Select(0, 0);
             myComboBox2.Focus();
         }
 
         private void myComboBox1_Enter(object sender, EventArgs e)
         {
-            //MessageBox.Show(myComboBox1.DroppedDown.ToString());
-            myComboBox1.Focus();
             if(!myComboBox1.DroppedDown)
             {
                 myComboBox1.DroppedDown = true;
-                myComboBox1.showDropDown();
             }
         }
 
@@ -115,17 +98,12 @@ namespace HomeMoney
             if (!myComboBox2.DroppedDown)
             {
                 myComboBox2.DroppedDown = true;
-                myComboBox2.showDropDown();
             }
-                
         }
 
         private void myComboBox2_AfterChange(object sender, EventArgs e)
         {
             myComboBox2.Text = myComboBox2.dtSource.Rows[myComboBox2.m_list.SelectedIndices[0]][1].ToString();
-            myComboBox2.SelectionStart = 0;
-            myComboBox2.SelectionLength = 0;
-            myComboBox2.Select(0, 0);
             textBox1.Focus();
         }
 
@@ -195,10 +173,6 @@ namespace HomeMoney
                 dateTimePicker1.Focus();
                 listView1.Items[listView1.Items.Count - 1].EnsureVisible();
             }
-        }
-        protected override void OnLostFocus(EventArgs e)
-        {
-            MessageBox.Show("dddd");
         }
 
         FileSystemWatcher watcher = new FileSystemWatcher();
@@ -272,6 +246,12 @@ namespace HomeMoney
         }
 
         bool bSend = false;
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox2.Focus();
+        }
+
         private void dateTimePicker1_Enter(object sender, EventArgs e)
         {
             if(!bSend && (bSend=!bSend))

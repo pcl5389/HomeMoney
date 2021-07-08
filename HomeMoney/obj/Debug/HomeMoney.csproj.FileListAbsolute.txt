@@ -3,7 +3,6 @@ D:\Projects\HomeMoney\HomeMoney\bin\Debug\HomeMoney.exe
 D:\Projects\HomeMoney\HomeMoney\bin\Debug\HomeMoney.pdb
 D:\Projects\HomeMoney\HomeMoney\bin\Debug\MyComboBox.dll
 D:\Projects\HomeMoney\HomeMoney\bin\Debug\MyComboBox.pdb
-D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.csprojAssemblyReference.cache
 D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.Form1.resources
 D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.Properties.Resources.resources
 D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.csproj.GenerateResource.cache
@@ -13,3 +12,8 @@ D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.exe
 D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.pdb
 D:\Projects\HomeMoney\HomeMoney\bin\Debug\ChnCharInfo.dll
 D:\Projects\HomeMoney\HomeMoney\bin\Debug\NPinyin.dll
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.csproj.AssemblyReference.cache
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\HomeMoney.exe.manifest
+D:\Projects\HomeMoney\HomeMoney\bin\Debug\HomeMoney.application
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.exe.manifest
+D:\Projects\HomeMoney\HomeMoney\obj\Debug\HomeMoney.application
