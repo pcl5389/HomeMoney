@@ -1,0 +1,9 @@
+D:\Projects\HomeMoney\MyComboBox\bin\x64\Release\MyComboBox.dll
+D:\Projects\HomeMoney\MyComboBox\bin\x64\Release\Scaler.dll
+D:\Projects\HomeMoney\MyComboBox\bin\x64\Release\Newtonsoft.Json.dll
+D:\Projects\HomeMoney\MyComboBox\bin\x64\Release\VTemplate.Engine.dll
+D:\Projects\HomeMoney\MyComboBox\bin\x64\Release\Scaler.pdb
+D:\Projects\HomeMoney\MyComboBox\obj\x64\Release\Scaler.UI.csproj.CoreCompileInputs.cache
+D:\Projects\HomeMoney\MyComboBox\obj\x64\Release\Scaler.UI.csproj.CopyComplete
+D:\Projects\HomeMoney\MyComboBox\obj\x64\Release\MyComboBox.dll
+D:\Projects\HomeMoney\MyComboBox\obj\x64\Release\Scaler.UI.csproj.AssemblyReference.cache

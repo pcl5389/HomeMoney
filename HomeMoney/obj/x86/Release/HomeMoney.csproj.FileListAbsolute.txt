@@ -1,0 +1,16 @@
+D:\Projects\HomeMoney\HomeMoney\bin\x86\Release\HomeMoney.exe.config
+D:\Projects\HomeMoney\HomeMoney\bin\x86\Release\HomeMoney.exe
+D:\Projects\HomeMoney\HomeMoney\bin\x86\Release\ChnCharInfo.dll
+D:\Projects\HomeMoney\HomeMoney\bin\x86\Release\MyComboBox.dll
+D:\Projects\HomeMoney\HomeMoney\bin\x86\Release\Newtonsoft.Json.dll
+D:\Projects\HomeMoney\HomeMoney\bin\x86\Release\NPinyin.dll
+D:\Projects\HomeMoney\HomeMoney\bin\x86\Release\Scaler.dll
+D:\Projects\HomeMoney\HomeMoney\bin\x86\Release\VTemplate.Engine.dll
+D:\Projects\HomeMoney\HomeMoney\obj\x86\Release\HomeMoney.csproj.AssemblyReference.cache
+D:\Projects\HomeMoney\HomeMoney\obj\x86\Release\HomeMoney.Form1.resources
+D:\Projects\HomeMoney\HomeMoney\obj\x86\Release\HomeMoney.Form2.resources
+D:\Projects\HomeMoney\HomeMoney\obj\x86\Release\HomeMoney.Properties.Resources.resources
+D:\Projects\HomeMoney\HomeMoney\obj\x86\Release\HomeMoney.csproj.GenerateResource.cache
+D:\Projects\HomeMoney\HomeMoney\obj\x86\Release\HomeMoney.csproj.CoreCompileInputs.cache
+D:\Projects\HomeMoney\HomeMoney\obj\x86\Release\HomeMoney.csproj.CopyComplete
+D:\Projects\HomeMoney\HomeMoney\obj\x86\Release\HomeMoney.exe
